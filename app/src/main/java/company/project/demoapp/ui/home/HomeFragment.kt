@@ -58,7 +58,7 @@ class HomeFragment : Fragment() {
                 adapter = CoinsAdapter(homeViewModel.mCoinsData!!.value!!)
                recyclerView.adapter = adapter
                recyclerView.layoutManager =
-                    GridLayoutManager(requireContext(),2)
+                    GridLayoutManager(requireContext(),3)
 
             })
         }else{

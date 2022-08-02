@@ -46,7 +46,6 @@ class CoinsAdapter (private val coinsList: Coins): RecyclerView.Adapter<CoinsAda
                 .into(holder.image)
         }
 
-        holder.history.text = history
         holder.name.text = name
 
 
@@ -54,13 +53,17 @@ class CoinsAdapter (private val coinsList: Coins): RecyclerView.Adapter<CoinsAda
 
     override fun getItemCount(): Int {
 
-        return coinsList.data.list.size
+        val limit = 9
+        return if (coinsList.data.list.size > limit){
+            limit
+        }else{
+            coinsList.data.list.size
+        }
     }
 
     class CoinsViewHolder (ItemView: View) : RecyclerView.ViewHolder(ItemView){
 
         val name: TextView = itemView.findViewById(R.id.name)
-        val history: TextView = itemView.findViewById(R.id.history)
         val image: ImageView = itemView.findViewById(R.id.coin_image)
     }
 
