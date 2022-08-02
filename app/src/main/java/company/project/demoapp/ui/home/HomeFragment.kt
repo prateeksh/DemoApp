@@ -1,6 +1,5 @@
 package company.project.demoapp.ui.home
 
-import android.R
 import android.content.Context
 import android.net.ConnectivityManager
 import android.os.Bundle
@@ -19,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.badge.BadgeUtils
 import com.google.android.material.badge.ExperimentalBadgeUtils
+import company.project.demoapp.R
 import company.project.demoapp.databinding.FragmentHomeBinding
 import company.project.demoapp.ui.adapter.CoinsAdapter
 
@@ -67,8 +67,9 @@ class HomeFragment : Fragment() {
             override fun onGlobalLayout() {
                 val badgeDrawable = BadgeDrawable.create(context!!)
                 //badgeDrawable.number = 32
-                badgeDrawable.backgroundColor = ContextCompat.getColor(requireContext(), R.color.holo_blue_dark)
+                badgeDrawable.backgroundColor = ContextCompat.getColor(requireContext(), R.color.circle_color)
                 badgeDrawable.badgeGravity = BadgeDrawable.TOP_END
+
                 BadgeUtils.attachBadgeDrawable(badgeDrawable, mNotify)
                 mNotify.viewTreeObserver.removeOnGlobalLayoutListener(this)
             }
@@ -78,7 +79,7 @@ class HomeFragment : Fragment() {
             override fun onGlobalLayout() {
                 val badgeDrawable = BadgeDrawable.create(context!!)
                 //badgeDrawable.number = 32
-                badgeDrawable.backgroundColor = ContextCompat.getColor(requireContext(), R.color.holo_blue_dark)
+                badgeDrawable.backgroundColor = ContextCompat.getColor(requireContext(), R.color.circle_color)
                 badgeDrawable.badgeGravity = BadgeDrawable.TOP_END
                 BadgeUtils.attachBadgeDrawable(badgeDrawable, mMessage)
                 mMessage.viewTreeObserver.removeOnGlobalLayoutListener(this)

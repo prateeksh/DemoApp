@@ -42,6 +42,7 @@ class CoinsAdapter (private val coinsList: Coins): RecyclerView.Adapter<CoinsAda
 
             Glide
                 .with(holder.itemView.context)
+
                 .load(image)
                 .into(holder.image)
         }
