@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import company.project.demoapp.R
 import company.project.demoapp.ui.model.Coins
-import company.project.demoapp.ui.model.List
+import company.project.demoapp.ui.model.Data
 
 class CoinsAdapter (private val coinsList: Coins): RecyclerView.Adapter<CoinsAdapter.CoinsViewHolder>(){
 
@@ -28,7 +28,7 @@ class CoinsAdapter (private val coinsList: Coins): RecyclerView.Adapter<CoinsAda
     override fun onBindViewHolder(holder: CoinsViewHolder, position: Int) {
 
         val ItemsViewModel = coinsList
-        val dataList: ArrayList<List>
+        val dataList: ArrayList<Data.List>
 
         dataList = ItemsViewModel.data.list
 
